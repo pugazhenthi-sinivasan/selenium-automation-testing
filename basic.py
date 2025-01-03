@@ -23,7 +23,7 @@ try:
     driver.find_element(By.ID, "username").send_keys("Sivakuma")
     print("Entered Username.")
 
-    driver.find_element(By.ID, "Email").send_keys("88@gmail.com")
+    driver.find_element(By.ID, "Email").send_keys("tami@gmail.com")
     print("Entered Email Address.")
 
     driver.find_element(By.ID, "password").send_keys("Siva@134567890")
@@ -47,9 +47,9 @@ except Exception as e:
 # Step 4: Wait for a while to observe the behavior (if needed)
 time.sleep(10)
 
-driver.find_element(By.XPATH,"//*[@id='Login-Email']").send_keys("88@gmail.com")
+driver.find_element(By.XPATH,"//*[@id='Login-Email']").send_keys("tami@gmail.com")
 driver.find_element(By.XPATH,"//*[@id='Login-password']").send_keys("Siva@134567890")
-
+time.sleep(10)
 
 # Step 5: Close the browser
 driver.quit()
