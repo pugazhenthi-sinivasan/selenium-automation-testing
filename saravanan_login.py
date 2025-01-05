@@ -74,7 +74,18 @@ comment_button = WebDriverWait(driver, 10).until(
 )
 comment_button.click()
 print("Comment button clicked successfully.")
-time.sleep(5)
+time.sleep(20)
+
+
+
+# # Step 8: song button 
+# song_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.XPATH,'//*[@id="__next"]/div/div/div[1]/div[5]/div/div[2]/button/svg/path'))
+# )
+# song_button.click()
+# print("Comment button clicked successfully.")
+# time.sleep(10)
+
 
 
 # Step 9: Navigate back
@@ -96,7 +107,7 @@ profile_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH,'/html/body/div/aside/a[2]/span'))
 )
 profile_button.click()
-print("Comment button clicked successfully.")
+print("profile navigated successfully.")
 time.sleep(5)
 
 
@@ -105,7 +116,7 @@ post_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH,'/html/body/div/aside/a[3]/span'))
 )
 post_button.click()
-print("Comment button clicked successfully.")
+print("post navigated successfully.")
 time.sleep(5)
 
 # # Step 14: chat navigated page
@@ -122,7 +133,7 @@ logout_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="Logout"]/span'))
 )
 logout_button.click()
-print("Comment button clicked successfully.")
+print(" logout clicked successfully.")
 time.sleep(5)
 
 
