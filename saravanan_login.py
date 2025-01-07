@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoAlertPresentException
+from selenium.webdriver.common.action_chains import ActionChains
 
 # Step 1: Launch the browser
 driver = webdriver.Chrome()
@@ -35,46 +36,58 @@ print("Entered login credentials.")
 
 
 # Step 5: Submit login 
-login_button_submit.click()  # Reuse the previously found element
-print("Login submitted successfully.")
-time.sleep(5)
-
+login_button_submit = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH, "//*[@id='login']"))
+)
+login_button_submit.click()
+print("Login button clicked successfully.")
 
 
 # Step 6: Like button count
 like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-2BrpUQK0d7SyQd5Wmez6"]'))
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-3zl4InGctP3HmFMAUpp2"]'))
 )
 like_button.click()
 print("Like button clicked successfully.")
 time.sleep(5)
+driver.refresh()
 
 
 
 # Step 7: View like details
 view_like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="showlike-2BrpUQK0d7SyQd5Wmez6"]'))
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="showlike-3zl4InGctP3HmFMAUpp2"]'))
 )
 view_like_button.click()
 print("View like details clicked.")
 time.sleep(5)
+
 
 multile_vindo_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="xmark"]'))
 )
 multile_vindo_button.click()
 print("View like details clicked.")
-time.sleep(5)
+time.sleep(1)
+
 
 
 
 # Step 8: Comment button interaction
-comment_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'//*[@id="comment-2BrpUQK0d7SyQd5Wmez6"]'))
-)
-comment_button.click()
+comment_box = driver.find_element(By.XPATH,'//*[@id="comment-3zl4InGctP3HmFMAUpp2"]') 
+comment_box.click()
 print("Comment button clicked successfully.")
-time.sleep(20)
+time.sleep(10)
+
+
+# driver.find_element(By.XPATH, '//*[@id="commentText"]').send_keys("comment")
+
+# send_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.XPATH,'//*[@id="feed"]/div[2]'))
+# )
+# send_button.click()
+# time.sleep(30)
+
 
 
 
@@ -119,18 +132,18 @@ post_button.click()
 print("post navigated successfully.")
 time.sleep(5)
 
-# # Step 14: chat navigated page
-# chat_button = WebDriverWait(driver, 10).until(
-#     EC.element_to_be_clickable((By.XPATH,'/html/body/div/aside/a[4]/span'))
-# )
-# chat_button.click()
-# print("Comment button clicked successfully.")
-# time.sleep(5)
+# Step 14: chat navigated page
+chat_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH,"//i[@id='comment-2BrpUQK0d7SyQd5Wmez6']"))
+)
+chat_button.click()
+print("Comment button clicked successfully.")
+time.sleep(5)
 
 
 # Step 14: logout navigated page
 logout_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'//*[@id="Logout"]/span'))
+    EC.element_to_be_clickable((By.ID,'Logout'))
 )
 logout_button.click()
 print(" logout clicked successfully.")
