@@ -256,11 +256,11 @@ edit_profile=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="edit-profile-btn"]'))
 )
 edit_profile.click()
-print("edit_profile 26")
+print("edit_profile 29")
 time.sleep(3)
 
 
-# # Step 29:cancel_edit_btn
+# # Step 30:cancel_edit_btn
 cancel_edit_btn=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.ID,'cancel-edit-btn'))
 )
@@ -268,31 +268,31 @@ cancel_edit_btn.click()
 print("cancel_edit_btn 29")
 time.sleep(3)
 
-# Step 30:edit_profile
+# Step 31:edit_profile
 edit_profile=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="edit-profile-btn"]'))
 )
 edit_profile.click()
-print("edit_profile 30")
+print("edit_profile 31")
 time.sleep(3)
 
 
-# Step 31:edit_profile-cance
+# Step 32:edit_profile-cance
 edit_profile_cance=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.ID,'cancel-edit-btn'))
 )
 edit_profile_cance.click()
-print("edit_profile-cance 31")
+print("edit_profile-cance 32")
 time.sleep(3)
 
 
 
-# Step 32: upload navigated page
+# Step 33: upload navigated page
 upload=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.CLASS_NAME,'nav-label'))
 )
 upload.click()
-print("upload 32")
+print("upload 33")
 time.sleep(3)
 
 # # Step 33:caption and hashtags Enter
