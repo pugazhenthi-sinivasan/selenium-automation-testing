@@ -41,11 +41,11 @@ login_button_submit = WebDriverWait(driver, 10).until(
 )
 login_button_submit.click()
 print("Login button clicked successfully.")
-
+time.sleep(10)
 
 # Step 6: Like button count
 like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-3zl4InGctP3HmFMAUpp2"]'))
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-4KjzQg8KJcsyIXGktV2K"]'))
 )
 like_button.click()
 print("Like button clicked successfully.")
