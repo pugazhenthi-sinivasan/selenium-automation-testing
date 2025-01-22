@@ -381,10 +381,7 @@ print("Driver closed 36.")
 
 
 
-# # Step 10: Navigate forward
-# driver.forward()
-# print("Navigated forward successfully.")
-# time.sleep(5)
+
 
 
 

@@ -45,7 +45,7 @@ time.sleep(10)
 
 # Step 6: Like button count
 like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-4KjzQg8KJcsyIXGktV2K"]'))
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="heart-kYwZiBoBs4CM4V5f3zW4"]'))
 )
 like_button.click()
 print("Like button clicked successfully.")
@@ -56,7 +56,7 @@ driver.refresh()
 
 # Step 7: View like details
 view_like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="showlike-3zl4InGctP3HmFMAUpp2"]'))
+    EC.element_to_be_clickable((By.ID, 'showlike-kYwZiBoBs4CM4V5f3zW4'))
 )
 view_like_button.click()
 print("View like details clicked.")
@@ -74,10 +74,10 @@ time.sleep(1)
 
 
 # Step 8: Comment button interaction
-comment_box = driver.find_element(By.XPATH,'//*[@id="comment-3zl4InGctP3HmFMAUpp2"]') 
-comment_box.click()
-print("Comment button clicked successfully.")
-time.sleep(10)
+# comment_box = driver.find_element(By.XPATH,'//*[@id="xmark"]') 
+# comment_box.click()
+# print("Comment button clicked successfully.")
+# time.sleep(10)
 
 
 # driver.find_element(By.XPATH, '//*[@id="commentText"]').send_keys("comment")
@@ -102,16 +102,16 @@ time.sleep(10)
 
 
 # Step 9: Navigate back
-driver.back()
-print("Navigated back successfully.")
-time.sleep(5)
+# driver.back()
+# print("Navigated back successfully.")
+# time.sleep(5)
 
 
 
-# Step 10: Navigate forward
-driver.forward()
-print("Navigated forward successfully.")
-time.sleep(5)
+# # Step 10: Navigate forward
+# driver.forward()
+# print("Navigated forward successfully.")
+# time.sleep(5)
 
 
 
