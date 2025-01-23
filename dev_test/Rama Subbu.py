@@ -3,8 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoAlertPresentException
-from selenium.webdriver.common.action_chains import ActionChains
 
 # Step 1: Launch the browser
 driver = webdriver.Chrome()
@@ -41,7 +39,7 @@ print("log in submitted succesfully ")
 time.sleep(4)
 
 
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+driver.execute_script("window.scrollTo(0, 1000)")
 time.sleep(5)
 
 

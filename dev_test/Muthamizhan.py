@@ -16,7 +16,7 @@ driver = webdriver.Chrome()
 driver.get("https://dmedia1.netlify.app/index.html")
 driver.maximize_window()
 print("Navigated to the website 2.")
-time.sleep(2)
+time.sleep(5)
 
 
 
@@ -27,6 +27,7 @@ login_button_submit = WebDriverWait(driver, 10).until(
 )
 login_button_submit.click()
 print("Login button clicked successfully 3.")
+time.sleep(5)
 
 
 
@@ -36,6 +37,7 @@ print("Login button clicked successfully 3.")
 driver.find_element(By.XPATH, '//*[@id="email"]').send_keys("pugalpugazh@gmail.com")
 driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("Pugal@1234")
 print("Entered login credentials 4.")
+time.sleep(5)
 
 
 
@@ -72,7 +74,7 @@ comment_open_button = WebDriverWait(driver, 10).until(
 comment_open_button.click()
 print("comment open button 7.")
 # driver.save_screenshot(f"comment_error_{int(time.time())}.png") 
-time.sleep(5)
+time.sleep(3)
 
 
 
@@ -237,7 +239,7 @@ message_button.click()
 print("Click messageButton 23")
 time.sleep(5)
 
-driver.find_element(By.ID, 'messageInput').send_keys("hi")
+driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
 
 
 
