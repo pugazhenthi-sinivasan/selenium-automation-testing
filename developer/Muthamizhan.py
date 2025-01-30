@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Step 1: Launch the browser
 driver = webdriver.Chrome()
+# driver = webdriver.Firefox()
+# driver = webdriver.Edge()
 
 
 
@@ -120,82 +122,12 @@ print("seve button 11")
 time.sleep(5)
 
 
-
-
-# Step 12: Discover navigated page
-discover_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[2]/a/span[2]'))
-)
-discover_button.click()
-print("discover avigated successfully 12.")
-time.sleep(6)
-
-
-
-
-# Step 13:search-bar
-driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("#back")
-print("search-bar 13")
-time.sleep(6)
-
-
-
-
-# Step 14:image_button
-image_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'//*[@id="results-container"]/div/div/img'))
-)
-image_button.click()
-print("Click image_button 14.")
-time.sleep(6)
-
-
-
-
-# Step 15: Navigate back
-driver.back()
-print("Navigated back successfully 15.")
-time.sleep(6)
-
-
-
-
-# Step 16:discover_button
-discover_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[2]/a/span[2]'))
-)
-discover_button.click()
-print("discover avigated successfully 16.")
-time.sleep(6)
-
-
-
-
-#  Step 17:search-bar
-driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("ThMizh")
-print("search-bar 17")
-time.sleep(6)
-
-
-
-
-# Step 18: home navigated page
-home_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[1]/a/span[2]'))
-)
-home_button.click()
-print("Comment button clicked successfully 18.")
-time.sleep(6)
-
-
-
-
 # Step 19:profile_button
 profile_button=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="postContainer"]/div[1]/div[2]/a'))
 )
 profile_button.click()
-print("profile_button 19")
+print("profile_button 12")
 time.sleep(6)
 
 
@@ -206,10 +138,8 @@ follow_button=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="action-button"]/li[1]/button'))
 )
 follow_button.click()
-print("follow_button 20")
+print("follow_button 13")
 time.sleep(6)
-
-
 
 
 # Step 21:post_image_button
@@ -217,7 +147,7 @@ post_image_button=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="posts-grid"]/div/img'))
 )
 post_image_button.click()
-print("post_image_button 21")
+print("post_image_button 14")
 time.sleep(6)
 
 
@@ -225,7 +155,7 @@ time.sleep(6)
 
 # Step 22: Navigate back
 driver.back()
-print("Navigated back successfully 22.")
+print("Navigated back successfully 15.")
 time.sleep(6)
 
 
@@ -236,23 +166,105 @@ message_button=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.ID,'messageButton'))
 )
 message_button.click()
-print("Click messageButton 23")
+print("Click messageButton 16")
 time.sleep(6)
 
-driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
+# driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
 
 
 
 
 
 # Step 24:send messageButton
-send_message_button=WebDriverWait(driver,10).until(
-    EC.element_to_be_clickable((By.ID,'sendMessageButton'))
-)
+send_message_button=driver.find_element(By.ID,'sendMessageButton')
 send_message_button.click()
-print("send message Button 24")
+print("send message Button 17")
 time.sleep(6)
 
+
+
+# Step 12: Discover navigated page
+discover_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[2]/a/span[2]'))
+)
+discover_button.click()
+print("discover avigated successfully 18.")
+time.sleep(6)
+
+
+
+
+# Step 13:search-bar
+driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("#back")
+print("search-bar 19")
+time.sleep(6)
+
+
+
+
+# Step 14:image_button
+image_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH,'//*[@id="results-container"]/div/div/img'))
+)
+image_button.click()
+print("Click image_button 20.")
+time.sleep(6)
+
+
+
+
+# Step 15: Navigate back
+driver.back()
+print("Navigated back successfully 21.")
+time.sleep(6)
+
+
+
+
+# Step 16:discover_button
+discover_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[2]/a/span[2]'))
+)
+discover_button.click()
+print("discover avigated successfully 22.")
+time.sleep(6)
+
+
+
+
+#  Step 17:search-bar
+driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("ThMizh")
+print("search-bar 23")
+time.sleep(6)
+
+
+click_uplond_button =driver.find_element(By.XPATH,'/html/body/aside/nav/ul[1]/li[4]/a/span[2]')
+click_uplond_button.click()
+print("uplond_button 24")
+time.sleep(6)
+
+
+click_saved_button =driver.find_element(By.XPATH,'/html/body/aside/nav/ul[1]/li[5]/a/span[2]')
+click_saved_button.click()
+print("click_uplond_button 25")
+time.sleep(6)
+
+
+
+click_saved_img =driver.find_element(By.XPATH,'//*[@id="saved-posts"]/div[1]/img')
+click_saved_img.click()
+print("click_saved_img 26")
+time.sleep(6)
+
+
+click_ansaved_img =driver.find_element(By.XPATH,'//*[@id="post-details"]/div[3]/div[6]/span[4]')
+click_ansaved_img.click()
+print("click_ansaved_img 27")
+time.sleep(6)
+
+driver.refresh()
+driver.back()
+time.sleep(5)
 
 
 
@@ -261,7 +273,7 @@ my_profile=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[2]/li[1]/a/span[2]'))
 )
 my_profile.click()
-print("my_profile 26")
+print("my_profile 28")
 time.sleep(4)
 
 
@@ -271,7 +283,7 @@ edit_profile=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="edit-profile-btn"]'))
 )
 edit_profile.click()
-print("edit_profile 27")
+print("edit_profile 29")
 time.sleep(5)
 
 
@@ -285,7 +297,7 @@ username_field.send_keys("pugal")
 username_field = driver.find_element(By.ID, "edit-bio")
 username_field.clear()  # Clear bio
 username_field.send_keys("hi") 
-print("New name, username, and bio. Enter 28")
+print("New name, username, and bio. Enter 30")
 time.sleep(6)
 
 
@@ -294,7 +306,7 @@ save_profile_btn=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.ID,'save-profile-btn'))
 )
 save_profile_btn.click()
-print("save_profile_btn 29")
+print("save_profile_btn 31")
 time.sleep(4)
 
 seved_button=driver.switch_to.alert
@@ -309,7 +321,7 @@ edit_profile=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.XPATH,'//*[@id="edit-profile-btn"]'))
 )
 edit_profile.click()
-print("edit_profile 30")
+print("edit_profile 32")
 time.sleep(3)
 
 
@@ -318,7 +330,7 @@ cancel_edit_btn=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.ID,'cancel-edit-btn'))
 )
 cancel_edit_btn.click()
-print("cancel_edit_btn 31")
+print("cancel_edit_btn 33")
 time.sleep(4)
 
 
@@ -327,24 +339,8 @@ upload=WebDriverWait(driver,10).until(
     EC.element_to_be_clickable((By.CLASS_NAME,'nav-label'))
 )
 upload.click()
-print("upload 33")
+print("upload 34")
 time.sleep(3)
-
-# # Step 33:caption and hashtags Enter
-# driver.find_element(By.ID, 'caption').send_keys("back")
-# driver.find_element(By.ID, 'hashtags').send_keys("back")
-# print("caption and hashtags Enter 33")
-# time.sleep(3)
-
-
-# # Step 34:postButton
-# postButton=WebDriverWait(driver,10).until(
-#     EC.element_to_be_clickable((By.ID,'postButton'))
-# )
-# postButton.click()
-# print("postButton 34")
-# time.sleep(3)
-
 
 # Step 35: save_button navigated page
 save_button = WebDriverWait(driver, 10).until(
@@ -369,7 +365,7 @@ time.sleep(6)
 
 # Step 36:Driver closed 
 driver.quit()
-print("Driver closed 36.")
+print("Driver closed 37.")
 
 
 

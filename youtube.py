@@ -11,60 +11,34 @@ driver = webdriver.Chrome()
 
 
 # Step 2: Navigate to the site and maximize the window
-driver.get("https://dmedia1.netlify.app/index.html")
+driver.get("https://www.youtube.com/")
 driver.maximize_window()
 print("Navigated to the website 2.")
-time.sleep(1)
+time.sleep(4)
 
-
-
-
-# Step 3: Click on login button
-login_button_submit = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="signupForm"]/div[7]/p/a'))
-)
-login_button_submit.click()
-print("Login button clicked successfully 3.")
-time.sleep(1)
 
 
 # Step 4: Enter login 
-driver.find_element(By.XPATH, '//*[@id="email"]').send_keys("pugalpugazh@gmail.com")
-driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("Pugal@1234")
-print("Entered login credentials 4.")
+driver.find_element(By.XPATH, '//*[@id="center"]/yt-searchbox/div[1]/form/input').send_keys("mr beast ")
+print("open the youtube")
 time.sleep(1)
-
-
 
 
 
 # Step 5: Submit login 
-login_button_submit=WebDriverWait(driver,10).until(
-    EC.element_to_be_clickable((By.XPATH,'//*[@id="submitSignIn"]'))
+searche_button_submit=WebDriverWait(driver,10).until(
+    EC.element_to_be_clickable((By.XPATH,'/html[1]/body[1]/ytd-app[1]/div[1]/div[2]/ytd-masthead[1]/div[4]/div[2]/yt-searchbox[1]/button[1]/yt-icon[1]/span[1]/div[1]'))
 )
-login_button_submit.click()
+searche_button_submit.click()
 print("log in submitted succesfully 5")
-time.sleep(1)
-
-
-# Step 1: Launch the browser
-# driver = webdriver.Chrome()
-
-
-
-# # Step 2: Navigate to the site and maximize the window
-# driver.get("https://www.youtube.com/")
-# driver.maximize_window()
-# print("Navigated to the website 2.")
-# time.sleep(1)
+time.sleep(5)
 
 
 
 
-# # Step 3: Click on login button
-# login_button_submit = WebDriverWait(driver, 10).until(
-#     EC.element_to_be_clickable((By.XPATH, '//*[@id="content"]/yt-lockup-view-model/div/a/yt-collection-thumbnail-view-model/yt-collections-stack/div/div[3]/yt-thumbnail-view-model/div/img'))
-# )
-# login_button_submit.click()
-# print("Login button clicked successfully 3.")
-# time.sleep(10)
+conform=driver.find_element(By.XPATH,'//*[@id="video-title"]/yt-formatted-string')
+conform.click()
+
+print("Login button clicked successfully 3.")
+time.sleep(10)
+
