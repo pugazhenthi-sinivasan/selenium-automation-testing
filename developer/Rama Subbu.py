@@ -6,9 +6,13 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Step 1: Launch the browser
 driver = webdriver.Chrome()
-
+start = time.time()
 # Step 2: Navigate to the site and maximize the window
 driver.get("https://funkyfindz.netlify.app/")
+end = time.time()
+# Calculate the load time
+load_time = end - start
+print(f"Load Time: {load_time} seconds")
 driver.maximize_window()
 print("Navigated to the website 2.")
 time.sleep(2)

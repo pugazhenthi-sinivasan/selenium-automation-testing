@@ -16,7 +16,7 @@ driver = webdriver.Chrome()
 driver.get("https://dmedia1.netlify.app/index.html")
 driver.maximize_window()
 print("Navigated to the website 2.")
-time.sleep(5)
+time.sleep(1)
 
 
 
@@ -27,7 +27,7 @@ login_button_submit = WebDriverWait(driver, 10).until(
 )
 login_button_submit.click()
 print("Login button clicked successfully 3.")
-time.sleep(5)
+time.sleep(1)
 
 
 
@@ -37,7 +37,7 @@ time.sleep(5)
 driver.find_element(By.XPATH, '//*[@id="email"]').send_keys("pugalpugazh@gmail.com")
 driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("Pugal@1234")
 print("Entered login credentials 4.")
-time.sleep(5)
+time.sleep(1)
 
 
 
@@ -49,7 +49,7 @@ login_button_submit=WebDriverWait(driver,10).until(
 )
 login_button_submit.click()
 print("log in submitted succesfully 5")
-time.sleep(5)
+time.sleep(1)
 
 
 
@@ -61,7 +61,7 @@ like_button = WebDriverWait(driver, 10).until(
 )
 like_button.click()
 print("Like button clicked successfully 6.")
-time.sleep(5)
+time.sleep(1)
 
 
 
@@ -74,16 +74,16 @@ comment_open_button = WebDriverWait(driver, 10).until(
 comment_open_button.click()
 print("comment open button 7.")
 # driver.save_screenshot(f"comment_error_{int(time.time())}.png") 
-time.sleep(3)
+time.sleep(5)
 
 
 
 
 ## Step 8: typing comment
-driver.find_element(By.CLASS_NAME,'comment-input').send_keys("hi")
+driver.find_element(By.XPATH,'/html/body/div/div/textarea').send_keys("hi")
 print("comment_hi 8")
 # driver.save_screenshot(f"comment_error_{int(time.time())}.png") 
-time.sleep(3)
+time.sleep(5)
 
 
 
@@ -128,7 +128,7 @@ discover_button = WebDriverWait(driver, 10).until(
 )
 discover_button.click()
 print("discover avigated successfully 12.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -136,7 +136,7 @@ time.sleep(5)
 # Step 13:search-bar
 driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("#back")
 print("search-bar 13")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -147,7 +147,7 @@ image_button = WebDriverWait(driver, 10).until(
 )
 image_button.click()
 print("Click image_button 14.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -155,7 +155,7 @@ time.sleep(5)
 # Step 15: Navigate back
 driver.back()
 print("Navigated back successfully 15.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -166,7 +166,7 @@ discover_button = WebDriverWait(driver, 10).until(
 )
 discover_button.click()
 print("discover avigated successfully 16.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -174,7 +174,7 @@ time.sleep(5)
 #  Step 17:search-bar
 driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("ThMizh")
 print("search-bar 17")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -185,7 +185,7 @@ home_button = WebDriverWait(driver, 10).until(
 )
 home_button.click()
 print("Comment button clicked successfully 18.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -196,7 +196,7 @@ profile_button=WebDriverWait(driver,10).until(
 )
 profile_button.click()
 print("profile_button 19")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -207,7 +207,7 @@ follow_button=WebDriverWait(driver,10).until(
 )
 follow_button.click()
 print("follow_button 20")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -218,7 +218,7 @@ post_image_button=WebDriverWait(driver,10).until(
 )
 post_image_button.click()
 print("post_image_button 21")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -226,7 +226,7 @@ time.sleep(5)
 # Step 22: Navigate back
 driver.back()
 print("Navigated back successfully 22.")
-time.sleep(5)
+time.sleep(6)
 
 
 
@@ -237,7 +237,7 @@ message_button=WebDriverWait(driver,10).until(
 )
 message_button.click()
 print("Click messageButton 23")
-time.sleep(5)
+time.sleep(6)
 
 driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
 
@@ -251,18 +251,8 @@ send_message_button=WebDriverWait(driver,10).until(
 )
 send_message_button.click()
 print("send message Button 24")
-time.sleep(5)
+time.sleep(6)
 
-
-
-
-# Step 25: home navigated page
-home_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH,'/html/body/aside/nav/ul[1]/li[1]/a/span[2]'))
-)
-home_button.click()
-print("Chome navigated 25.")
-time.sleep(3)
 
 
 
@@ -272,7 +262,7 @@ my_profile=WebDriverWait(driver,10).until(
 )
 my_profile.click()
 print("my_profile 26")
-time.sleep(3)
+time.sleep(4)
 
 
 
@@ -282,7 +272,7 @@ edit_profile=WebDriverWait(driver,10).until(
 )
 edit_profile.click()
 print("edit_profile 27")
-time.sleep(3)
+time.sleep(5)
 
 
 # Step 28:New name, username, and bio. Enter
@@ -296,7 +286,7 @@ username_field = driver.find_element(By.ID, "edit-bio")
 username_field.clear()  # Clear bio
 username_field.send_keys("hi") 
 print("New name, username, and bio. Enter 28")
-time.sleep(5)
+time.sleep(6)
 
 
 # Step 29:save_profile_btn
@@ -305,7 +295,7 @@ save_profile_btn=WebDriverWait(driver,10).until(
 )
 save_profile_btn.click()
 print("save_profile_btn 29")
-time.sleep(3)
+time.sleep(4)
 
 seved_button=driver.switch_to.alert
 print("switch")
@@ -329,7 +319,7 @@ cancel_edit_btn=WebDriverWait(driver,10).until(
 )
 cancel_edit_btn.click()
 print("cancel_edit_btn 31")
-time.sleep(3)
+time.sleep(4)
 
 
 # Step 33: upload navigated page
@@ -362,8 +352,7 @@ save_button = WebDriverWait(driver, 10).until(
 )
 save_button.click()
 print("save_button navigated page 35.")
-time.sleep(3)
-
+time.sleep(5)
 
 
 
@@ -374,6 +363,7 @@ logout_button = WebDriverWait(driver, 10).until(
 logout_button.click()
 print("logout_button navigated page 36.")
 time.sleep(6)
+
 
 
 
