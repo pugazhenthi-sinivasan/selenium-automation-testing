@@ -41,7 +41,7 @@ login_button_submit = WebDriverWait(driver, 10).until(
 )
 login_button_submit.click()
 print("Login button clicked successfully.")
-time.sleep(10)
+time.sleep(5)
 
 # Step 6: Like button count
 like_button = WebDriverWait(driver, 10).until(
@@ -55,37 +55,37 @@ time.sleep(5)
 
 
 # Step 7: View like details
-view_like_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, 'showlike-FJDTwwb4Ep1sSybVnFmu'))
-)
-view_like_button.click()
-print("View like details clicked.")
-time.sleep(5)
+# view_like_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.ID, 'showlike-FJDTwwb4Ep1sSybVnFmu'))
+# )
+# view_like_button.click()
+# print("View like details clicked.")
+# time.sleep(5)
 
 
-multile_details_button= driver.find_element(By.ID,'xmark') 
-multile_details_button.click()
-print("View like details clicked.")
-time.sleep(4)
+# multile_details_button= driver.find_element(By.ID,'xmark') 
+# multile_details_button.click()
+# print("View like details clicked.")
+# time.sleep(4)
 
 
 
 # Step 8: Comment button interaction
 # comment_box = driver.find_element(By.ID,'comment-FJDTwwb4Ep1sSybVnFmu') 
 # comment_box = driver.find_element(By.CLASS_NAME,'fa-solid fa-comment') 
-comment_box = driver.find_element(By.XPATH,'//*[@id="comment-FJDTwwb4Ep1sSybVnFmu"]') 
-comment_box.click()
-print("Comment button clicked successfully.")
-time.sleep(10)
+# comment_box = driver.find_element(By.XPATH,'//*[@id="comment-FJDTwwb4Ep1sSybVnFmu"]') 
+# comment_box.click()
+# print("Comment button clicked successfully.")
+# time.sleep(10)
 
 
-driver.find_element(By.ID,'c').send_keys("comment")
+# driver.find_element(By.ID,'c').send_keys("comment")
 
-send_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID,'CommentSend'))
-)
-send_button.click()
-time.sleep(30)
+# send_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.ID,'CommentSend'))
+# )
+# send_button.click()
+# time.sleep(30)
 
 
 click_button = WebDriverWait(driver, 10).until(
