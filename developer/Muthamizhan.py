@@ -172,14 +172,14 @@ time.sleep(6)
 # driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
 
 
-
-
-
 # Step 24:send messageButton
 send_message_button=driver.find_element(By.ID,'sendMessageButton')
 send_message_button.click()
 print("send message Button 17")
 time.sleep(6)
+
+
+
 
 
 
@@ -192,14 +192,10 @@ print("discover avigated successfully 18.")
 time.sleep(6)
 
 
-
-
 # Step 13:search-bar
 driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("#back")
 print("search-bar 19")
 time.sleep(6)
-
-
 
 
 # Step 14:image_button
@@ -211,14 +207,10 @@ print("Click image_button 20.")
 time.sleep(6)
 
 
-
-
 # Step 15: Navigate back
 driver.back()
 print("Navigated back successfully 21.")
 time.sleep(6)
-
-
 
 
 # Step 16:discover_button
@@ -230,20 +222,46 @@ print("discover avigated successfully 22.")
 time.sleep(6)
 
 
-
-
 #  Step 17:search-bar
 driver.find_element(By.XPATH, '//*[@id="search-bar"]').send_keys("ThMizh")
 print("search-bar 23")
 time.sleep(6)
 
 
+
+
+
+
+#uplond page img
 click_uplond_button =driver.find_element(By.XPATH,'/html/body/aside/nav/ul[1]/li[4]/a/span[2]')
 click_uplond_button.click()
-print("uplond_button 24")
+print("uplond_ Navigate")
+time.sleep(4)
+
+
+file=driver.find_element(By.XPATH,'//*[@id="file"]')
+file.send_keys(r"C:\PUGAL_FSSA\selenium-automation-testing\selenium.png")
+print("uplond")
+time.sleep(4)
+
+
+file=driver.find_element(By.ID,'caption')
+file.send_keys("Tamil Nadu is the southernmost state of India")
+file=driver.find_element(By.ID,'hashtags')
+file.send_keys("Tamil Nadu is the southernmost state of India")
+
+click_saved_img =driver.find_element(By.ID,'postButton')
+click_saved_img.click()
+print("postButton")
 time.sleep(6)
 
+# seved_button=driver.switch_to.alert
+# print("switch")
+# seved_button.accept()
+# time.sleep(5)
 
+
+#saved button
 click_saved_button =driver.find_element(By.XPATH,'/html/body/aside/nav/ul[1]/li[5]/a/span[2]')
 click_saved_button.click()
 print("click_uplond_button 25")
