@@ -46,9 +46,7 @@ time.sleep(1)
 
 
 # Step 5: Submit login 
-login_button_submit=WebDriverWait(driver,10).until(
-    EC.element_to_be_clickable((By.XPATH,'//*[@id="submitSignIn"]'))
-)
+login_button_submit =driver.find_element(By.XPATH,'//*[@id="submitSignIn"]')
 login_button_submit.click()
 print("log in submitted succesfully 5")
 time.sleep(1)

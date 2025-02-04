@@ -23,13 +23,13 @@ time.sleep(4)
 login_button_=driver.find_element(By.XPATH,'//*[@id="loginForm"]/div[1]/div[3]')
 login_button_.click()
 print("login_button")
-time.sleep(5)
+time.sleep(15)
 
 
-seved_button=driver.switch_to.alert
-print("switch")
-seved_button.accept()
-time.sleep(5)
+# seved_button=driver.switch_to.alert
+# print("switch")
+# seved_button.accept()
+# time.sleep(5)
 
 home_button_=driver.find_element(By.XPATH,'//*[@id="mount_0_0_mx"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/span/div/a/div/div[2]')
 home_button_.click()
