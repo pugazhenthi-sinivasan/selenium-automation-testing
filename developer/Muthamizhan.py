@@ -246,12 +246,12 @@ time.sleep(4)
 file=driver.find_element(By.ID,'caption')
 file.send_keys("Tamil Nadu is the southernmost state of India")
 file=driver.find_element(By.ID,'hashtags')
-file.send_keys("Tamil Nadu is the southernmost state of India")
+file.send_keys("#Tamil Nadu is the southernmost state of India")
 
-click_saved_img =driver.find_element(By.ID,'postButton')
-click_saved_img.click()
-print("postButton")
-time.sleep(6)
+# click_saved_img =driver.find_element(By.ID,'postButton')
+# click_saved_img.click()
+# print("postButton")
+# time.sleep(6)
 
 # seved_button=driver.switch_to.alert
 # print("switch")

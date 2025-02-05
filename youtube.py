@@ -40,5 +40,22 @@ conform=driver.find_element(By.XPATH,'//*[@id="video-title"]/yt-formatted-string
 conform.click()
 
 print("Login button clicked successfully 3.")
-time.sleep(10)
+time.sleep(6)
+
+
+click_sub=driver.find_element(By.XPATH,'//*[@id="subscribe-button-shape"]/button/yt-touch-feedback-shape/div/div[2]')
+click_sub.click()
+time.sleep(5)
+
+
+click_sub=driver.find_element(By.XPATH,'//*[@id="button"]/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]')
+click_sub.click()
+time.sleep(5)
+
+driver.back()
+time.sleep(5)
+
+
+driver.back()
+time.sleep(5)
 
