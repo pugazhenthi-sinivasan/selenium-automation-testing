@@ -7,8 +7,8 @@ browser = webdriver. Chrome()
 browser.get('https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407')
 browser.maximize_window()
 time.sleep(4)
-browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(4)
+browser.execute_script("window.scrollBy(0, 300);")
+time.sleep(2)
 
 checkboxes = browser.find_elements(By.XPATH, "//input[@type='checkbox']")
 for checkbox in checkboxes:

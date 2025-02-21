@@ -167,7 +167,7 @@ message_button.click()
 print("Click messageButton 16")
 time.sleep(6)
 
-# driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
+driver.find_element(By.ID, 'messageInput').send_keys("today nice day")
 
 
 # Step 24:send messageButton
@@ -279,8 +279,9 @@ print("click_ansaved_img 27")
 time.sleep(6)
 
 driver.refresh()
-driver.back()
 time.sleep(5)
+driver.back()
+
 
 
 

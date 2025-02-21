@@ -7,6 +7,8 @@ driver =webdriver.Chrome()
 driver.get("https://www.naukri.com/")
 driver.maximize_window()
 driver.implicitly_wait(10)
-lista=driver.find_element(By.TAG_NAME,"a")
+
+lista = driver.find_elements(By.TAG_NAME,"a")
 print(len(lista))
-driver.quit()
+driver.quit() 
+
