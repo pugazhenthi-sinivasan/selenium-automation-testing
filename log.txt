@@ -1,6 +1,0 @@
-Load Time: 8.011708498001099 seconds
-Entered login credentials.
-Clicked login button.
-Navigated to Home page.
-Navigated to Search.
-type of tax.

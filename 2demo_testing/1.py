@@ -15,7 +15,7 @@ item_buttons = driver.find_elements(By.CSS_SELECTOR, ".btn_inventory")
 
 for button in item_buttons:
     button.click()
-    time.sleep(5)
+    time.sleep(40)
 # driver.find_element(By.ID, "shopping_cart_container").click()
 # time.sleep(1)
 # driver.find_element(By.ID, "checkout").click()

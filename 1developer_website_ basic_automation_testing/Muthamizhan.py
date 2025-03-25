@@ -20,6 +20,13 @@ driver.maximize_window()
 print("Navigated to the website 2.")
 time.sleep(1)
 
+start = time.time()
+end = time.time()
+load_time = end - start
+print(f"Load Time: {load_time} seconds")
+
+with open("log.txt", "a") as log_file:
+    log_file.write(f"Load Time: {load_time} seconds\n")
 
 
 
@@ -30,6 +37,8 @@ login_button_submit = WebDriverWait(driver, 10).until(
 login_button_submit.click()
 print("Login button clicked successfully 3.")
 time.sleep(1)
+with open("log.txt", "a") as log_file:
+    log_file.write("Login button clicked successfully 3")
 
 
 

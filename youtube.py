@@ -65,6 +65,18 @@ with open("log.txt", "a") as log_file:
 
 time.sleep(5)
 
+
+
+
+# like_button = driver.find_element(By.XPATH, '//*[@id="top-level-buttons-computed"]/segmented-like-dislike-button-view-model/yt-smartimation/div/div/like-button-view-model/toggle-button-view-model/button-view-model/button/yt-touch-feedback-shape/div/div[2]')
+# like_button.click()
+# print("Subscribed to the channel.")
+# with open("log.txt", "a") as log_file:
+#     log_file.write("Clicked on Subscribe button.\n")
+
+# time.sleep(5)
+
+
 # Step 7: Click 'Sign In' if required
 try:
     sign_in_button = driver.find_element(By.XPATH, '//*[@id="button"]/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]')
@@ -78,7 +90,18 @@ except:
     with open("log.txt", "a") as log_file:
         log_file.write("Sign In button not found.\n")
 
-# Step 8: Navigate back twice
+
+search_box = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/c-wiz/div/div[2]/div/div/div[1]/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
+search_box.send_keys("pugazhenthi.sinivasan@fssa.freshworks.com")
+time.sleep(5)
+
+
+
+sign_email_button = driver.find_element(By.XPATH, '//*[@id="identifierNext"]/div/button/span')
+sign_email_button.click()
+time.sleep(5)
+
+# Step 8: Navigate back twice  
 driver.back()
 time.sleep(5)
 

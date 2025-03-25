@@ -32,6 +32,7 @@ print("Login button clicked successfully.")
 driver.find_element(By.XPATH, "//*[@id='Login-Email']").send_keys("pugalpugazh@gmail.com")
 driver.find_element(By.XPATH, "//*[@id='Login-password']").send_keys("Pugazhe123@$")
 print("Entered login credentials.")
+time.sleep(3)
 
 
 
@@ -72,6 +73,11 @@ time.sleep(5)
 
 # Step 8: Comment button interaction
 # comment_box = driver.find_element(By.ID,'comment-FJDTwwb4Ep1sSybVnFmu') 
+# comment_box.click()
+# time.sleep(3)
+
+# Wait for the element to be present
+ # Remove extra quotes if present
 # comment_box = driver.find_element(By.CLASS_NAME,'fa-solid fa-comment') 
 # comment_box = driver.find_element(By.XPATH,'//*[@id="comment-FJDTwwb4Ep1sSybVnFmu"]') 
 # comment_box.click()
@@ -88,37 +94,37 @@ time.sleep(5)
 # time.sleep(30)
 
 
-click_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '/html/body/div/aside/a[2]/span'))
-)
-click_button.click()
-print("Like button clicked successfully.")
-time.sleep(5)
+# click_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.XPATH, '/html/body/div/aside/a[2]/span'))
+# )
+# click_button.click()
+# print("Like button clicked successfully.")
+# time.sleep(5)
 
 
-click_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, '/html/body/div/aside/a[3]'))
-)
-click_button.click()
-print("Like button clicked successfully.")
-time.sleep(5)
+# click_button = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.XPATH, '/html/body/div/aside/a[3]'))
+# )
+# click_button.click()
+# print("Like button clicked successfully.")
+# time.sleep(5)
 
-img = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, 'upload-label'))
-)
-img.click()
-print("Like button clicked successfully.")
-time.sleep(5)
+# img = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.ID, 'upload-label'))
+# )
+# img.click()
+# print("Like button clicked successfully.")
+# time.sleep(5)
 
-uplod=driver.find_element(By.ID,'upload-label')
-uplod.send_keys("C:\PUGAL_FSSA\selenium-automation-testing\selenium.png")
+# uplod=driver.find_element(By.ID,'upload-label')
+# uplod.send_keys("C:\PUGAL_FSSA\selenium-automation-testing\selenium.png")
 
-img_send = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, 'uploadBtn'))
-)
-img_send.click()
-print("Like button clicked successfully.")
-time.sleep(5)
+# img_send = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.ID, 'uploadBtn'))
+# )
+# img_send.click()
+# print("Like button clicked successfully.")
+# time.sleep(5)
 
 
 # # Step 8: song button 
@@ -199,3 +205,5 @@ time.sleep(5)
 # # )
 # # search_button.click()
 # # time.sleep(5)
+
+driver.quit()
