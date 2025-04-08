@@ -1,0 +1,8 @@
+Log File - Selenium Automation
+====================================
+Load Time: 7.274511098861694 seconds
+Entered login credentials.
+Clicked login button.
+Navigated to Home page.
+Navigated to Search.
+type of tax.

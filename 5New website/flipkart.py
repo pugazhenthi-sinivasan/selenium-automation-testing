@@ -70,15 +70,30 @@ time.sleep(5)
 
 click_phone = flipkart.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div[1]/div[2]/div[2]/div/div/div/a/div[1]/div[1]/div/div")
 click_phone.click()
-time.sleep(30)
+time.sleep(6)
 print("ok")
+
+
+# seved_button=flipkart.switch_to.alert
+# print("switch")
+# seved_button.accept()
+# time.sleep(5)
+
+tabs= flipkart.window_handles
+flipkart.switch_to.window(tabs[-1])
+print ("window switch")
+
+click_page=flipkart.find_element(By.XPATH,"//li[contains(@class, 'flex')]//span")
+click_page.click()
+time.sleep(5)
+print("something")
 # Hover over an image
-actions = ActionChains(flipkart)
-hover = flipkart.find_element(By.XPATH, "//a[@class='GK7Ljp']//div[@class='_0QyAeO']")
-actions.move_to_element(hover).perform()
-flipkart.implicitly_wait(5)
-time.sleep(3)
-print("correct working")
+# actions = ActionChains(flipkart)
+# hover = flipkart.find_element(By.XPATH, "//a[@class='GK7Ljp']//div[@class='_0QyAeO']")
+# actions.move_to_element(hover).perform()
+# flipkart.implicitly_wait(5)
+# time.sleep(3)
+# print("correct working")
 
 # hover = flipkart.find_element(By.XPATH,'//*[@id="container"]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div[1]/div/div[1]/ul/li[2]/div/div/img')
 # actions.move_to_element(hover).perform()

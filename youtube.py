@@ -4,117 +4,143 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Create or open a log file
+
 with open("log.txt", "w") as log_file:
     log_file.write("Log File - Selenium Automation\n")
     log_file.write("====================================\n")
 
-# Step 1: Launch the browser
+# Launch the browser
 driver = webdriver.Chrome()
 start = time.time()  # Start time
 
-# Step 2: Navigate to YouTube and maximize the window
+# Navigate YouTube maximize the window
 driver.get("https://www.youtube.com/")
 driver.maximize_window()
 end = time.time()  # End time
 
 # Calculate and log the load time
 load_time = end - start
-with open("log.txt", "a") as log_file:
-    log_file.write(f"Website Load Time: {load_time} seconds\n")
-    log_file.write("Navigated to YouTube successfully.\n")
-
 print(f"Load Time: {load_time} seconds")
 time.sleep(4)
 
-# Step 3: Enter search text
+    
+    
 search_box = driver.find_element(By.XPATH, '//*[@id="center"]/yt-searchbox/div[1]/form/input')
-search_box.send_keys("Mr Beast")
+search_box.send_keys("Freshworks Social Impact")
 print("Opened YouTube and entered search text.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Entered 'Mr Beast' in the search box.\n")
+driver.implicitly_wait(2)
 
-time.sleep(1)
 
-# Step 4: Click search button
+#search button
 search_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '/html[1]/body[1]/ytd-app[1]/div[1]/div[2]/ytd-masthead[1]/div[4]/div[2]/yt-searchbox[1]/button[1]/yt-icon[1]/span[1]/div[1]'))
 )
 search_button.click()
 print("Search submitted successfully.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Search button clicked.\n")
+driver.implicitly_wait(4)
+ 
 
-time.sleep(5)
+click_Fssa=driver.find_element(By.PARTIAL_LINK_TEXT,'Freshworks Social Impact')
+click_Fssa.click()
+driver.implicitly_wait(4)
+    
+click_vidoes=driver.find_element(By.XPATH,'//*[@id="items"]/ytm-shorts-lockup-view-model-v2[1]/ytm-shorts-lockup-view-model/a/div/img')
+click_vidoes.click()
+time.sleep(10)
 
-# Step 5: Click on the first video
-video = driver.find_element(By.XPATH, '//*[@id="video-title"]/yt-formatted-string')
-video.click()
-print("Clicked on the video.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Clicked on the first video.\n")
 
-time.sleep(6)
-
-# Step 6: Click Subscribe
-subscribe_button = driver.find_element(By.XPATH, '//*[@id="subscribe-button-shape"]/button/yt-touch-feedback-shape/div/div[2]')
-subscribe_button.click()
-print("Subscribed to the channel.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Clicked on Subscribe button.\n")
-
+driver.back()
 time.sleep(5)
 
 
+click_vidoes=driver.find_element(By.PARTIAL_LINK_TEXT,'Videos')
+click_vidoes.click()
+time.sleep(5)
 
 
-# like_button = driver.find_element(By.XPATH, '//*[@id="top-level-buttons-computed"]/segmented-like-dislike-button-view-model/yt-smartimation/div/div/like-button-view-model/toggle-button-view-model/button-view-model/button/yt-touch-feedback-shape/div/div[2]')
-# like_button.click()
-# print("Subscribed to the channel.")
-# with open("log.txt", "a") as log_file:
-#     log_file.write("Clicked on Subscribe button.\n")
-
-# time.sleep(5)
+j=driver.find_element(By.PARTIAL_LINK_TEXT,'Batch2 Graduation Day')
+j.click()
+time.sleep(5)
 
 
-# Step 7: Click 'Sign In' if required
-try:
-    sign_in_button = driver.find_element(By.XPATH, '//*[@id="button"]/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]')
-    sign_in_button.click()
-    print("Clicked on Sign In.")
-    with open("log.txt", "a") as log_file:
-        log_file.write("Clicked on Sign In button.\n")
-    time.sleep(5)
-except:
-    print("Sign In button not found, skipping...")
-    with open("log.txt", "a") as log_file:
-        log_file.write("Sign In button not found.\n")
+driver.back()
+time.sleep(5)
 
+
+Shorts=driver.find_element(By.XPATH,'//*[@id="tabsContent"]/yt-tab-group-shape/div[1]/yt-tab-shape[3]/div[1]')
+Shorts.click()
+time.sleep(5)
+
+ 
+Shorts_video=driver.find_element(By.XPATH,'//*[@id="content"]/ytm-shorts-lockup-view-model-v2/ytm-shorts-lockup-view-model/a/div/img')
+Shorts_video.click()
+time.sleep(10)
+
+driver.back()
+time.sleep(2)
+
+Playlists=driver.find_element(By.XPATH,'//*[@id="tabsContent"]/yt-tab-group-shape/div[1]/yt-tab-shape[4]/div[1]')
+Playlists.click()
+# driver.implicitly_wait(5)
+time.sleep(5)
+
+
+
+Playlists_vi = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="items"]/yt-lockup-view-model/div/a/yt-collection-thumbnail-view-model/yt-collections-stack/div/div[3]/yt-thumbnail-view-model/div/img'))
+)
+Playlists_vi.click()
+time.sleep(10)
+
+driver.find_element(By.XPATH,'//*[@id="buttons"]/ytd-button-renderer/yt-button-shape/a/yt-touch-feedback-shape/div/div[2]').click()
+time.sleep(5)
 
 search_box = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/c-wiz/div/div[2]/div/div/div[1]/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
-search_box.send_keys("pugazhenthi.sinivasan@fssa.freshworks.com")
+search_box.send_keys("mistaketamil@gmail.com")
 time.sleep(5)
 
 
 
 sign_email_button = driver.find_element(By.XPATH, '//*[@id="identifierNext"]/div/button/span')
 sign_email_button.click()
-time.sleep(5)
+time.sleep(10)
 
-# Step 8: Navigate back twice  
+
+
+# Navigate back 
 driver.back()
 time.sleep(5)
 
 driver.back()
+time.sleep(6)
+
+
+# Enter search text
+search_box = driver.find_element(By.XPATH, '//*[@id="center"]/yt-searchbox/div[1]/form/input')
+search_box.send_keys("Mr Beast")
+print("Opened YouTube and entered search text.")
+time.sleep(1)
+
+# search button
+search_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.XPATH, '/html[1]/body[1]/ytd-app[1]/div[1]/div[2]/ytd-masthead[1]/div[4]/div[2]/yt-searchbox[1]/button[1]/yt-icon[1]/span[1]/div[1]'))
+)
+search_button.click()
+print("Search submitted successfully.")
 time.sleep(5)
 
-print("Navigation completed.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Navigation back completed.\n")
+# Click video
+video = driver.find_element(By.XPATH, '//*[@id="video-title"]/yt-formatted-string')
+video.click()
+print("Clicked on the video.")
+time.sleep(6)
+
 
 # Close the browser
 driver.quit()
 print("Browser closed.")
-with open("log.txt", "a") as log_file:
-    log_file.write("Browser closed.\n")
+
+    
+    
+
 
